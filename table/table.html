@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TABLE CREATE USING FUNCTION</title>
+</head>
+
+<body>
+    <script>
+        document.body.style.padding = "0";
+        document.body.style.margin = "0";
+        document.body.style.boxSizing = "borderbox";
+
+        var main_div = document.createElement("div");
+        main_div.style.width = "100%";
+        document.body.appendChild(main_div);
+
+        var table = document.createElement("table");
+        table.style.width = "90%";
+        table.style.margin = "0 auto";
+        table.style.borderCollapse = "collapse";
+        table.style.color = "white";
+        main_div.appendChild(table);
+
+
+        function adding_row() {
+            var row;
+            row = document.createElement("tr");
+            row.style.border = "20px solid black";
+            table.appendChild(row);
+            return row;
+        };
+
+
+        function adding_column(date_month, row, icon) {
+            var table_data = document.createElement("td");
+            table_data.style.width = "28%";
+            table_data.style.borderRight = "1px solid black";
+            table_data.style.backgroundColor = "gray";
+            row.appendChild(table_data);
+
+            var table_data_div = document.createElement("div");
+            table_data_div.style.width = "20%";
+            table_data_div.style.float = "left";
+            table_data_div.style.paddingLeft = "50px";
+            table_data.appendChild(table_data_div);
+
+            var table_data_img = document.createElement("img");
+            table_data_img.style.width = "20px";
+            table_data_img.src = icon;
+            table_data_div.appendChild(table_data_img);
+
+            var table_data_content = document.createElement("span");
+            table_data_content.innerText = date_month;
+            table_data_content.style.fontWeight = "bold";
+            table_data_content.style.marginRight = "25px";
+            table_data.appendChild(table_data_content);
+
+            row.appendChild(table_data);
+        };
+
+
+        function show_all_btn(buynow_soldout, row) {
+            var table_data_4 = document.createElement("td");
+            table_data_4.style.width = "15%";
+            table_data_4.style.fontWeight = "bold";
+            table_data_4.style.textAlign = "center";
+            table_data_4.style.padding = "15px";
+            table_data_4.style.color = "white";
+            row.appendChild(table_data_4);
+
+            if (buynow_soldout == "BUY NOW") {
+                table_data_4.innerText = buynow_soldout;
+                table_data_4.style.backgroundColor = "red";
+                table_data_4.addEventListener("click", function () { buy_now(this) });
+            }
+            else if (buynow_soldout == "SOLD OUT") {
+                table_data_4.style.backgroundColor = "brown";
+                table_data_4.innerHTML = buynow_soldout;
+            }
+        };
+
+
+        var row1 = adding_row();
+        adding_column("17 SEPTEMBER", row1, "../table/image/calendar.png");
+        adding_column("MARTIN GARRIX", row1, "../table/image/voice.png");
+        adding_column("NEW ORLEANS,LA", row1, "../table/image/location.png");
+
+        show_all_btn("BUY NOW", row1);
+
+        var row2 = adding_row();
+        adding_column("28 SEPTEMBER", row2, "../table/image/calendar.png");
+        adding_column("NICKY ROMEO", row2, "../table/image/voice.png");
+        adding_column("MEMPHIS,TN", row2, "../table/image/location.png");
+        show_all_btn("SOLD OUT", row2);
+
+        var row3 = adding_row();
+        adding_column("14 MARCH", row3, "../table/image/calendar.png");
+        adding_column("VENKATESH", row3, "../table/image/voice.png");
+        adding_column("TIRUNELVELI", row3, "../table/image/location.png");
+        show_all_btn("SOLD OUT", row3);
+
+
+        var show_events_div = document.createElement("div");
+        show_events_div.style.width = "87.1%";
+        show_events_div.style.backgroundColor = "gray";
+        show_events_div.style.margin = "0 auto";
+        show_events_div.innerText = "";
+        show_events_div.style.border = "20px solid black";
+        show_events_div.style.textAlign = "center";
+        main_div.appendChild(show_events_div);
+
+        var show_events = document.createElement("p");
+        show_events.style.backgroundColor = "";
+        show_events.innerText = "SHOW ALL EVENTS";
+        show_events.style.fontWeight = "bold";
+        show_events.style.color = "white";
+        show_events_div.appendChild(show_events);
+
+        show_events_div.addEventListener("click", add_rows);
+
+
+
+        function buy_now(event) {
+            var parent_element = event.parentElement;
+            var datas = parent_element.querySelectorAll('span');
+            var data = "";
+            datas.forEach(element => {
+                data += element.innerHTML + "\n";
+            });
+            alert("Your Details has added \n " + data);
+        };
+
+
+        function add_rows() {
+            for (var i = 0; i < 2; i++) {
+                var row2 = adding_row();
+                adding_column("07 NOVEMBER", row2, "../table/image/calendar.png");
+                adding_column("MARC ANTONY", row2, "../table/image/voice.png");
+                adding_column("MEMPHIS,TN", row2, "../table/image/location.png");
+
+                if (i % 2 == 0) {
+                    show_all_btn("SOLD OUT", row2);
+                } else {
+                    show_all_btn("BUY NOW", row2);
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

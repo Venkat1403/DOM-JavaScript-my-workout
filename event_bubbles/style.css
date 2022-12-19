@@ -1,0 +1,16 @@
+body {
+    padding: 25px 50px;
+    background-color: pink;
+}
+
+div {
+    padding: 25px 50px;
+    background-color: green;
+    width: max-content;
+}
+
+span {
+    display: block;
+    padding: 25px 50px;
+    background-color: blue;
+}

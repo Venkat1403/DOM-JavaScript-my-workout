@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavScript form validation</title>
+</head>
+
+<body>
+    <div id="form_div">
+        <form action="" id="form" name="form">
+            <div>
+                <label for="fname">Name : </label>
+                <input type="text" id="fname">
+            </div>
+
+            <div id="age_parent">
+                <label for="age">Age : </label>
+                <input type="text" id="age">
+            </div>
+
+            <div id="gender_parent">
+                <label for="email">Gender : </label> <br>
+                <input type="radio" name="gender" id="gender1" value="Male">Male : <br>
+                <!-- <label for="male">Male</label><br> -->
+                <input type="radio" name="gender" id="gender2" value="Female">Female : <br>
+                <!-- <label for="female">Female</label><br> -->
+                <input type="radio" name="gender" id="gender3" value="Trangender">Trangender : <br>
+                <!-- <label for="trangender">Trangender</label><br> -->
+            </div>
+
+            <div id="phone_no_parent">
+                <label for="phone_no">Phone Number : </label>
+                <input type="text" id="phone_no">
+            </div>
+
+            <div id="aadhaar_parent">
+                <label for="aadhaar">Aadhaar Number : </label>
+                <input type="text" name="" id="aadhaar">
+            </div>
+
+            <div id="email_parent">
+                <label for="email">Email : </label>
+                <input type="text" id="email">
+            </div>
+
+            <div id="intrest_parent">
+                <label for="intrest">Intrest : </label><br>
+                <input type="checkbox" name="intrest" id="intrest1" value="Sports">Sports <br>
+                <input type="checkbox" name="intrest" id="intrest2" value="Entertainment">Entertainment <br>
+                <input type="checkbox" name="intrest" id="intrest3" value="Technology">Technology <br>
+            </div>
+
+            <div>
+                <label for="district">District : </label>
+                <select name="district" id="district">
+                    <option hidden></option>
+                    <option value="Nellai">Nellai</option>
+                    <option value="Madurai">Madurai</option>
+                    <option value="Kanyakumari">Kanyakumari</option>
+                    <option value="Viruthunagar">Viruthunagar</option>
+                    <option value="Dindugal">Dindugal</option>
+                    <option value="Tiruchi">Tiruchi</option>
+                    <option value="Vilupuram">Vilupuram</option>
+                    <option value="Tambaram">Tambaram</option>
+                    <option value="Tenkasi">Tenkasi</option>
+                    <option value="Thuthukudi">Thuthukudi</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="state">State : </label>
+                <select name="state" id="state">
+                    <option hidded></option>
+                    <option value="TamilNadu">Tamil Nadu</option>
+                    <option value="Assam">Assam</option>
+                    <option value="Goa">Goa</option>
+                    <option value="Andrapradesh">Andrapradesam</option>
+                    <option value="Teleugana">Telungana</option>
+                    <option value="Mathyapradesh">Mathiyapradesam</option>
+                    <option value="West Bengal">West Bengal</option>
+                    <option value="Uthirapradesh">Uthirapradesam</option>
+                    <option value="Punjab">Punjab</option>
+                    <option value="Haryana">Haryana</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="country">Country : </label>
+                <input type="text" id="country">
+            </div>
+
+            <div>
+                <label for="address">Address : </label>
+                <textarea name="address" id="address"></textarea>
+            </div>
+
+            <div>
+                <label for="comments">Comments</label>
+                <textarea name="comments" id="comments"></textarea>
+            </div>
+
+            <div id="reset_btn">
+                <button type="submit" id="reset">Reset</button>
+
+                <button type="button" id="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+
+    <style>
+        #form_div {
+            width: 70%;
+            margin: 0 auto;
+            padding: 35px;
+        }
+
+        #form {
+            width: 50%;
+            margin: 0 auto;
+        }
+
+        div {
+            padding: 20px;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        #reset_btn button {
+            text-align: center;
+        }
+    </style>
+
+    <script src="../js_form/script.js"></script>
+</body>
+
+</html>

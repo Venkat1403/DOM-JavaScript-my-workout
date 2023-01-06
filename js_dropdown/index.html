@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Dropdown</title>
+</head>
+
+<body>
+    <div id="dropdown_parent">
+        <div id="state_parent">
+            <div>
+                <label for="state">State : </label>
+                <select name="state" id="state">
+                    <div id="state_hide">
+                        <option hidden>Select Your State</option>
+                    </div>
+                </select>
+            </div>
+        </div>
+
+        <div id="district_parent">
+            <div>
+                <label for="district">District : </label>
+                <select name="district" id="district">
+                    <option hidden>Select Your District</option>
+                </select>
+            </div>
+        </div>
+
+        <div id="taluk_parent">
+            <div>
+                <label for="taluk">Taluk : </label>
+                <select name="taluk" id="taluk">
+                    <option hidden>Select Your Taluk</option>
+                </select>
+            </div>
+        </div>
+
+        <div id="village_parent">
+            <div>
+                <label for="village">Village : </label>
+                <select name="village" id="village">
+                    <option hidden>Select Your Village</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        #dropdown_parent {
+            width: 80%;
+            margin: 0 auto;
+            padding: 50px;
+            background-color: cornflowerblue;
+        }
+
+        #state_parent {
+            width: 25%;
+            float: left;
+            text-align: center;
+        }
+
+        #district_parent {
+            width: 25%;
+            float: left;
+            text-align: center;
+        }
+
+        #taluk_parent {
+            width: 25%;
+            float: left;
+            text-align: center;
+        }
+
+        #village_parent {
+            width: 25%;
+            float: left;
+            text-align: center;
+        }
+    </style>
+
+    <script src="../js_dropdown/script.js"></script>
+</body>
+
+</html>
